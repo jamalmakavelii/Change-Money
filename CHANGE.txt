@@ -1,0 +1,16 @@
+def calculate_change(total_cost, amount_paid):
+    if amount_paid < total_cost:
+        return "Insufficient payment. Please provide more money."
+    
+    change = amount_paid - total_cost
+    return change
+
+# Example usage:
+total_cost = 20.99  # The total cost of the purchase
+amount_paid = 30.00  # The amount paid by the customer
+
+change = calculate_change(total_cost, amount_paid)
+if isinstance(change, str):
+    print(change)
+else:
+    print(f"Change to be returned: ${change:.2f}")
